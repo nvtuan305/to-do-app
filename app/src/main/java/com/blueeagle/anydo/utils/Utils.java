@@ -8,6 +8,11 @@ public class Utils {
 
     private static int mCurrentIdx = 0;
 
+    /**
+     * Get the next id for new task
+     *
+     * @return new id
+     */
     public static int getNextTaskId() {
         return mCurrentIdx++;
     }

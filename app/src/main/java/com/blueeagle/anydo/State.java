@@ -19,7 +19,7 @@ public abstract class State {
     public abstract ArrayList<Task> tasks();
 
     public static State getDefaultState() {
-        // Init two default tasks
+        // Init a default task
         Task mDefTask = ImmutableTask.builder()
                 .id(Utils.getNextTaskId())
                 .content("This is a task")

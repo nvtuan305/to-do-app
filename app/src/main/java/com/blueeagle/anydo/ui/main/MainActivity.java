@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.blueeagle.anydo.R;
 import com.blueeagle.anydo.Store;
-import com.blueeagle.anydo.Subscriber;
+import com.blueeagle.anydo.StateListener;
 import com.blueeagle.anydo.utils.ActionFactory;
 import com.blueeagle.anydo.utils.DialogFactory;
 
@@ -17,7 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity implements Subscriber {
+public class MainActivity extends AppCompatActivity implements StateListener {
 
     @BindView(R.id.rcv_tasks)
     RecyclerView mRcvTasks;

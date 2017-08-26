@@ -18,7 +18,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
 /**
@@ -52,8 +51,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
 
     @Override
     public void onBindViewHolder(TaskViewHolder holder, int position) {
-        //holder.mCbTaskState.setOnCheckedChangeListener(null);
-
         Task task = mTasks.get(position);
         holder.mTxtTaskContent.setText(task.content());
         holder.mCbTaskState.setChecked(task.isCompleted());
@@ -88,7 +85,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         }
 
         @OnClick(R.id.check_box_state)
-        public void toggleTask() {
+        void toggleTask() {
             int id = mTasks.get(getAdapterPosition()).id();
             Store.getInstance().dispatch(ActionFactory.createToggleAction(id));
         }

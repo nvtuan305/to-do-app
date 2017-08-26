@@ -12,6 +12,12 @@ import java.util.Comparator;
 
 public class SortUtils {
 
+    /**
+     * Sort task list by date created and completion state
+     *
+     * @param tasks Task list
+     * @return Sorted task list
+     */
     public static ArrayList<Task> sortByState(ArrayList<Task> tasks) {
         Collections.sort(tasks, new Comparator<Task>() {
             @Override

@@ -12,7 +12,7 @@ public class Store {
 
     private Reducer mReducer;
     private State mCurrentState;
-    private ArrayList<Subscriber> mSubscribers;
+    private ArrayList<StateListener> mSubscribers;
 
     private static class StoreLoader {
         private static Store store = new Store();
@@ -32,11 +32,11 @@ public class Store {
         return mCurrentState;
     }
 
-    public void subscribe(Subscriber subscriber) {
+    public void subscribe(StateListener subscriber) {
         mSubscribers.add(subscriber);
     }
 
-    public void unsubscribe(Subscriber subscriber) {
+    public void unsubscribe(StateListener subscriber) {
         if (mSubscribers.contains(subscriber))
             mSubscribers.remove(subscriber);
     }
@@ -49,7 +49,7 @@ public class Store {
     private void applyNewState() {
         if (mSubscribers == null) return;
 
-        for (Subscriber subscriber : mSubscribers) {
+        for (StateListener subscriber : mSubscribers) {
             subscriber.onStateChange();
         }
     }

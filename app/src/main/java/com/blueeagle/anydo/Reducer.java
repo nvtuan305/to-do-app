@@ -16,6 +16,9 @@ import java.util.ArrayList;
 
 public class Reducer {
 
+    /**
+     * Handle action dispatched in the app
+     */
     public State reduce(Action action, State oldState) {
         Action.ActionType actionType = action.getType();
         switch (actionType) {
@@ -33,6 +36,9 @@ public class Reducer {
         }
     }
 
+    /**
+     * Add new task then return the next state
+     */
     private State addNewTask(Action action, State oldState) {
         String content = ((AddAction) action).getContent();
         Task task = ImmutableTask.builder()
@@ -49,6 +55,9 @@ public class Reducer {
         return ImmutableState.builder().tasks(newTasks).build();
     }
 
+    /**
+     * Toggle a task then return the next state
+     */
     private State toggleTask(Action action, State oldState) {
         int id = ((DeleteAndToggleAction) action).getId();
         ArrayList<Task> newTasks = new ArrayList<>();
@@ -69,6 +78,9 @@ public class Reducer {
         return ImmutableState.builder().tasks(newTasks).build();
     }
 
+    /**
+     * Delete a task then return the next state
+     */
     private State deleteTask(Action action, State oldState) {
         int id = ((DeleteAndToggleAction) action).getId();
         ArrayList<Task> newTasks = new ArrayList<>();
