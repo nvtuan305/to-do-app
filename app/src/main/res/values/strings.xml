@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Anydo</string>
+    <string name="prompt_task_content">I want to...</string>
+    <string name="error_no_content">Please enter a task</string>
+    <string name="dialog_action_ok">OK</string>
+    <string name="dialog_message_info">This app will not save your data, so all tasks will be deleted when you exit the app.</string>
+</resources>

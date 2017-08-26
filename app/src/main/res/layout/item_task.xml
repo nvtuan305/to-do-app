@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <CheckBox
+        android:id="@+id/check_box_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:button="@drawable/selector_checkable_view"
+        android:scaleX="0.60"
+        android:scaleY="0.60" />
+
+    <TextView
+        android:id="@+id/text_task_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="12dp"
+        android:layout_toLeftOf="@+id/image_delete"
+        android:layout_toRightOf="@+id/check_box_state"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Remember doing something"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/image_delete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="19dp"
+        app:srcCompat="@drawable/ic_delete" />
+
+</RelativeLayout>

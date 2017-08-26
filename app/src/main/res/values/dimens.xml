@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_small">8dp</dimen>
+    <dimen name="space_normal">16dp</dimen>
+    <dimen name="radius_corner_normal">4dp</dimen>
+    <dimen name="radius_corner_super_large">100dp</dimen>
+</resources>
